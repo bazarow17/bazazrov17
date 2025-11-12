@@ -29,10 +29,9 @@ def vremyadnya(chas):
         return 'дня'
     elif chas >=18 and chas<24:
         return 'вечера' 
-vremya = input('введите время').split()
-if vremya[0][0] != '-' and vremya[1][0] != '-':
+vremya = input('введите время\n').split()
+if len(vremya) == 2 and vremya[0][0] != '-'  and vremya[1][0] != '-' :
     vremya = list(map(int, vremya))
-    print(vremya)
     if vremya[0]<24 and vremya[0]>=0 and vremya[1]<60 and vremya[1]>=0  :
         if vremya[0] == 0 and vremya[1] == 0:
             print('полночь')
@@ -54,5 +53,6 @@ if vremya[0][0] != '-' and vremya[1][0] != '-':
             print('вводи норамльные данные(час должен быть от 0 до 23)')
         elif vremya[0] >=60:
             print('вводи норамльные данные(минута должна быть от 0 до 59)')
+        
 else:
-    print('время должно быть положительным')
+    print('вводи норамльные данные')
