@@ -29,7 +29,7 @@ def vremyadnya(chas):
         return 'дня'
     elif chas >=18 and chas<24:
         return 'вечера' 
-vremya = input().split()
+vremya = input('введите время').split()
 if vremya[0][0] != '-' and vremya[1][0] != '-':
     vremya = list(map(int, vremya))
     print(vremya)
