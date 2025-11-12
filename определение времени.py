@@ -3,7 +3,7 @@ def chasu(chas):
         chas = chas-12
     if chas == 1:
         return 'час'
-    elif chas > 1 and chas <5:
+    elif 1 < chas < 5 :
         return 'часа'
     else:
         return 'часов'
@@ -15,24 +15,26 @@ def minutu(minut):
     else:
         if minut%10 == 1:
             return 'минута'
-        elif minut%10 >1 and minut%10<5:
+        elif 1 < minut%10 < 5:
             return 'минуты'
         else:
             return 'минут'
         
 def vremyadnya(chas):
-    if chas >= 0 and chas < 6:
+    if 0 <= chas < 6:
         return 'ночи'
-    elif chas >= 6 and chas < 12:
+    elif 6 <= chas < 12:
         return 'утра'
-    elif chas >= 12 and chas <18:
+    elif 12 <= chas < 18:
         return 'дня'
-    elif chas >=18 and chas<24:
-        return 'вечера' 
-vremya = input('введите время\n').split()
-if len(vremya) == 2 and vremya[0][0] != '-'  and vremya[1][0] != '-' :
+    elif 18 <= chas < 24:
+        return 'вечера'
+
+print('введите время')        
+vremya = input().split()
+if len(vremya) == 2 and vremya[0].isdigit()  and vremya[1].isdigit():
     vremya = list(map(int, vremya))
-    if vremya[0]<24 and vremya[0]>=0 and vremya[1]<60 and vremya[1]>=0  :
+    if 0 <= vremya[0] < 24  and 0 <= vremya[1] < 60  :
         if vremya[0] == 0 and vremya[1] == 0:
             print('полночь')
         elif vremya[0] == 12 and vremya[1] == 0:
