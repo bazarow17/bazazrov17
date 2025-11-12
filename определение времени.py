@@ -23,7 +23,7 @@ def minutu(minut):
 def vremyadnya(chas):
     if chas >= 0 and chas < 6:
         return 'ночи'
-    elif chas <= 6 and chas < 12:
+    elif chas >= 6 and chas < 12:
         return 'утра'
     elif chas >= 12 and chas <18:
         return 'дня'
@@ -32,6 +32,7 @@ def vremyadnya(chas):
 vremya = input().split()
 if vremya[0][0] != '-' and vremya[1][0] != '-':
     vremya = list(map(int, vremya))
+    print(vremya)
     if vremya[0]<24 and vremya[0]>=0 and vremya[1]<60 and vremya[1]>=0  :
         if vremya[0] == 0 and vremya[1] == 0:
             print('полночь')
