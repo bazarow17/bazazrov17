@@ -10,7 +10,6 @@ j = 0
 a = int(input(''))
 d = []
 if a == 1:
-    n = int(input())
     b = list(map(int, input().split()))
 elif a == 0:
     n = random.randint(1, 12)
